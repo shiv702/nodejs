@@ -3,12 +3,12 @@ pipeline {
     // environment {
     //     BRANCH_NAME = "${env.BRANCH_NAME}"
     // }
-    stages {
-        stage('checkout') {
-            steps {
-                git branch: 'main', credentialsId: '33f3bdae-c4a0-4dea-aaa8-24a21faf5a7d', url: 'https://github.com/shiv702/nodejs.git'
-            }
-        }
+    // stages {
+    //     stage('checkout') {
+    //         steps {
+    //             git branch: 'main', credentialsId: 'github-pabbico', url: 'https://github.com/pabbico/jenkins-tutorials.git'
+    //         }
+    //     }
         // stage('Test Branch') {
         //     when {
         //         branch 'test'
@@ -25,7 +25,7 @@ pipeline {
                 sh 'docker build -t main .'
             }
         }
-        {
+         stage('Main Branch cloning') {
             // when {
             //     branch 'main'
             // }
