@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
 //                 sh "echo aditya@123 | sudo -S chown aditya:aditya /var/run/docker.sock"
-                sh 'sudo docker build -t main .'
+                sh 'docker build -t main .'
             }
         }
         stage('Run Container') {
