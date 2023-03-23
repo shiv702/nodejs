@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                git branch: 'main', credentialsId: 'github-pabbico', url: 'https://github.com/pabbico/jenkins-tutorials.git'
+                git branch: 'main', credentialsId: '33f3bdae-c4a0-4dea-aaa8-24a21faf5a7d', url: 'https://github.com/shiv702/nodejs.git'
             }
         }
         // stage('Test Branch') {
