@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'chown jenkins:jenkins /var/run/docker.sock'
-                sh 'docker build -t main .'
+                sh 'sudo chown root:root /var/run/docker.sock'
+                sh 'sudo docker build -t main .'
             }
         }
         stage('Run Container') {
